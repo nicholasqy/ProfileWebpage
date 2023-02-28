@@ -7,16 +7,18 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div class="navigation">
-		<button class="menu">&#9776;</button>
-		<ul>
-			<li><a href="#">Unit Maps</a></li>
-			<li><a href="#">Activities</a></li>
-			<li><a href="#">Announcements and Notifications</a></li>
-			<li><a href="#">Profile Page</a></li>
-			<li><a href="#">Logout</a></li>
-		</ul>
-	</div>
+	<div class="dropdown-container">
+		<div class="dropdown">
+		  <button class="dropbtn">Navigation</button>
+		  <div class="dropdown-content">
+			<a href="#">Unit Maps</a>
+			<a href="#">User Activities</a>
+			<a href="#">Announcements and Notifications</a>
+			<a href="#">Profile Page</a>
+			<a href="#">Logout</a>
+		  </div>
+		</div>
+	  </div>
 	<div class="profile">
 		<div class="profile-picture">
 			<img src="https://t3.ftcdn.net/jpg/03/47/77/38/360_F_347773818_LLKm2Y5S6mYlp26pkIYFbN1VMGW03PbF.jpg" alt="Profile Picture">
@@ -56,8 +58,8 @@
 				</ul>
 			</div>
 		</div>
+		
 	</div>
-	<script src="script.js"></script>
+	<script src="./script.js"></script>
 </body>
 </html>
-
