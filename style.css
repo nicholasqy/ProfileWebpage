@@ -11,89 +11,6 @@ body {
 	background-color: #f5f5f5;
 }
 
-/* Navigation*/
-
-.navigation {
-	position: fixed;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	width: 250px;
-	background-color: #004080;
-	color: white;
-	overflow-y: auto;
-}
-
-.navigation button {
-	display: none;
-}
-
-.navigation ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-.navigation li {
-	padding: 20px;
-	border-bottom: 1px solid #002b59;
-}
-
-.navigation li:last-child {
-	border-bottom: none;
-}
-
-.navigation a {
-	color: white;
-	text-decoration: none;
-}
-
-.navigation li:hover {
-	background-color: #002b59;
-}
-
-@media screen and (max-width: 768px) {
-	.navigation {
-		width: 100%;
-		height: auto;
-		z-index: 100;
-	}
-
-	.navigation button {
-		display: block;
-		position: fixed;
-		top: 10px;
-		right: 10px;
-		font-size: 20px;
-		background-color: transparent;
-		border: none;
-		color: white;
-	}
-
-	.navigation ul {
-		display: none;
-		position: fixed;
-		top: 60px;
-		left: 0;
-		right: 0;
-		background-color: #002b59;
-		z-index: 99;
-	}
-
-	.navigation ul.active {
-		display: block;
-	}
-
-	.navigation li {
-		display: block;
-		padding: 10px 20px;
-		border-bottom: 1px solid #004080;
-	}
-
-	.navigation li:last-child {
-		border-bottom: none;
-	}
-}
 
 /* Profile stuff */
 
@@ -191,62 +108,60 @@ body {
 	font-size: 24px;
 }
 
-/* Dropdown container */
-.dropdown-container {
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 200px;
-	background-color: #f1f1f1;
-	overflow-x: hidden;
-	z-index: 1;
-  }
-  
-  /* Dropdown button */
-  .dropbtn {
-	display: block;
-	width: 100%;
-	padding: 16px;
-	font-size: 16px;
-	text-align: left;
+/* Style the button that triggers the dropdown */
+.dropdown-button {
+	background-color: #ffffff;
+	color: rgb(0, 0, 0);
+	padding: 10px;
+	font-size: 20px;
 	border: none;
-	outline: none;
-	background-color: inherit;
-	color: #000;
 	cursor: pointer;
+	margin-left: 10px;
+	margin-top: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  /* Dropdown content */
+  /* Style the dropdown container */
+  .dropdown {
+	position: relative;
+	display: inline-block;
+  }
+  
+  /* Style the dropdown content (hidden by default) */
   .dropdown-content {
 	display: none;
 	position: absolute;
-	top: 100%;
-	left: 0;
 	background-color: #f1f1f1;
-	min-width: 160px;
 	z-index: 1;
+	padding: 10px;
   }
   
-  /* Links inside the dropdown */
+  /* Style the links inside the dropdown */
   .dropdown-content a {
+	color: black;
 	display: block;
-	padding: 12px 16px;
-	text-decoration: none;
-	color: #000;
+	padding: 10px;
   }
   
-  /* Change color of dropdown links on hover */
+  /* Add a hover effect to links */
   .dropdown-content a:hover {
 	background-color: #ddd;
   }
   
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
+  /* Show the dropdown content when the button is clicked */
+  .dropdown.active .dropdown-content {
 	display: block;
+	animation: dropdown-animation 0.1s ease-in-out;
   }
   
-  /* Add a grey background color to dropdown links that are currently active */
-  .dropdown-content a.active {
-	background-color: #ccc;
+  /* Define the dropdown animation */
+  @keyframes dropdown-animation {
+	from {
+	  opacity: 0;
+	  transform: translateY(-10px);
+	}
+	to {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
   }
