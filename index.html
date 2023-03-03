@@ -5,18 +5,66 @@
 	<title>User Profile</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 <body>
-	<div class="dropdown">
-		<button class="dropdown-button">Navigation</button>
-		<div class="dropdown-content">
-		  <a href="#">Unit Maps</a>
-		  <a href="#">User Activities</a>
-		  <a href="#">Announcements and Notifications</a>
-		  <a href="#">Profile Page</a>
-		  <a href="#">Logout</a>
-		</div>
-	  </div>  
+   <div class="btn">
+	  <span class="fas fa-bars"></span>
+   </div>
+   <nav class="sidebar">
+	  <div class="text">
+		 Navigation
+	  </div>
+	  <ul>
+		 <li class="active"><a href="#">Dashboard</a></li>
+		 <li>
+			<a href="#" class="feat-btn">Course
+			<span class="fas fa-caret-down first"></span>
+			</a>
+			<ul class="feat-show">
+			   <li><a href="#">Units</a></li>
+			   <li><a href="#">Assignments</a></li>
+			</ul>
+		 </li>
+		 <li>
+			<span class="fas fa-caret-down second"></span>
+			</a>
+			<ul class="serv-show">
+			</ul>
+		 </li>
+		 <li><a href="#">Unit Maps</a></li>
+		 <li><a href="#">User Activities</a></li>
+		 <li><a href="#">Announcements and Notifications</a></li>
+		 <li><a href="#">Profile Page</a></li>
+		 <li><a href="#">Logout</a></li>
+	  </ul>
+   </nav>
+   <div class="content">
+	  <div class="header">
+	  </div>
+	  <p>
+	  </p>
+   </div>
+   <script>
+	  $('.btn').click(function(){
+		$(this).toggleClass("click");
+		$('.sidebar').toggleClass("show");
+	  });
+		$('.feat-btn').click(function(){
+		  $('nav ul .feat-show').toggleClass("show");
+		  $('nav ul .first').toggleClass("rotate");
+		});
+		$('.serv-btn').click(function(){
+		  $('nav ul .serv-show').toggleClass("show1");
+		  $('nav ul .second').toggleClass("rotate");
+		});
+		$('nav ul li').click(function(){
+		  $(this).addClass("active").siblings().removeClass("active");
+		});
+   </script>
+</body>
+</head>
+
 	<div class="profile">
 		<div class="profile-picture">
 			<img src="https://t3.ftcdn.net/jpg/03/47/77/38/360_F_347773818_LLKm2Y5S6mYlp26pkIYFbN1VMGW03PbF.jpg" alt="Profile Picture">
@@ -28,22 +76,22 @@
 				<div class="progress-meter">
 					<p>Course Progress</p>
 					<div class="meter">
-						<span style="width: 0%"></span>
+						<span style="width: 10%"></span>
 					</div>
-					<p class="percentage">0%</p>
+					<p class="percentage">10%</p>
 				</div>
 				<div class="progress-meter">
 					<p>Unit Progress</p>
 					<div class="meter">
-						<span style="width: 0%"></span>
+						<span style="width: 90%"></span>
 					</div>
-					<p class="percentage">0%</p>
+					<p class="percentage">90%</p>
 				</div>
 			</div>
 			<div class="learning-tasks">
 				<h3 class="section-title">Currently Working On</h3>
 				<ul>
-					<li><a href="#">Web Challenge: HackLabs Profile Page</a></li>
+					<li><a>Web Challenge: HackLabs Profile Page</a></li>
 				</ul>
 				<h3 class="section-title">Recently Completed</h3>
 				<ul>
@@ -51,8 +99,8 @@
 				</ul>
 				<h3 class="section-title">Available Tasks</h3>
 				<ul>
-					<li><a href="#">Tutorial Hell</a></li>
-                    <li><a href="#">FreeCodeCamp</a></li>
+					<li><a>Tutorial Hell</a></li>
+                    <li><a>FreeCodeCamp</a></li>
 				</ul>
 			</div>
 		</div>
@@ -61,4 +109,3 @@
 	<script src="./script.js"></script>
 </body>
 </html>
-
