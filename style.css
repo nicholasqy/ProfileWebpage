@@ -134,10 +134,6 @@ nav ul li a span{
   transition: transform 0.4s;
 }
 
-nav ul li a span.rotate{
-  transform: translateY(-50%) rotate(-180deg);
-}
-
 .content{
   position: absolute;
   top: 50%;
@@ -158,6 +154,8 @@ nav ul li a span.rotate{
   font-weight: 500;
 }
 
+/* page style */
+ 
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -500,7 +498,7 @@ body {
 	color: #777;
 }
 
-.meter2 {
+.meter {
 	height: 20px;
 	background-color: #ddd;
 	border-radius: 10px;
@@ -520,7 +518,6 @@ body {
 	margin-top: 10px;
 	color: #777;
 }
-
 
 .learning-tasks {
 	margin-bottom: 50px;
@@ -545,6 +542,3 @@ body {
 	margin-bottom: 9px;
 	justify-content: center;
 }
-
-
-
